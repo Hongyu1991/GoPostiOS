@@ -15,6 +15,7 @@
 		865BA6AA1FB55D1C00580671 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 865BA6A91FB55D1C00580671 /* main.m */; };
 		865BA6B41FB55D1C00580671 /* GoPostTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865BA6B31FB55D1C00580671 /* GoPostTests.m */; };
 		865BA6BF1FB55D1C00580671 /* GoPostUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865BA6BE1FB55D1C00580671 /* GoPostUITests.m */; };
+		865BA6CF1FB55DBA00580671 /* SCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 865BA6CE1FB55DBA00580671 /* SCPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		865BA6BA1FB55D1C00580671 /* GoPostUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoPostUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		865BA6BE1FB55D1C00580671 /* GoPostUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoPostUITests.m; sourceTree = "<group>"; };
 		865BA6C01FB55D1C00580671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		865BA6CD1FB55DBA00580671 /* SCPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCPost.h; sourceTree = "<group>"; };
+		865BA6CE1FB55DBA00580671 /* SCPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCPost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		865BA6991FB55D1C00580671 /* GoPost */ = {
 			isa = PBXGroup;
 			children = (
+				865BA6CC1FB55D2800580671 /* Model */,
 				865BA69A1FB55D1C00580671 /* AppDelegate.h */,
 				865BA69B1FB55D1C00580671 /* AppDelegate.m */,
 				865BA69D1FB55D1C00580671 /* ViewController.h */,
@@ -130,6 +134,15 @@
 				865BA6C01FB55D1C00580671 /* Info.plist */,
 			);
 			path = GoPostUITests;
+			sourceTree = "<group>";
+		};
+		865BA6CC1FB55D2800580671 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				865BA6CD1FB55DBA00580671 /* SCPost.h */,
+				865BA6CE1FB55DBA00580671 /* SCPost.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +281,7 @@
 				865BA69F1FB55D1C00580671 /* ViewController.m in Sources */,
 				865BA6AA1FB55D1C00580671 /* main.m in Sources */,
 				865BA69C1FB55D1C00580671 /* AppDelegate.m in Sources */,
+				865BA6CF1FB55DBA00580671 /* SCPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
