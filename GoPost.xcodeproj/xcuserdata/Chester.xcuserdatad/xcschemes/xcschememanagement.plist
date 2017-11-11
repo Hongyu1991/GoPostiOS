@@ -7,7 +7,25 @@
 		<key>GoPost.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>865BA6961FB55D1C00580671</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>865BA6AE1FB55D1C00580671</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>865BA6B91FB55D1C00580671</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

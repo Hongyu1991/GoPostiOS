@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SCTabBarController.h"
+#import "SCLocationManager.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    SCTabBarController *tabBarController = [[SCTabBarController alloc] init];
+//    self.window.rootViewController = tabBarController;
+//    [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[SCTabBarController alloc] init];
+    [self.window makeKeyAndVisible];
+    [self updateLocation];
     return YES;
 }
 
@@ -26,15 +35,21 @@
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[SCLocationManager sharedManager] stopLoadUserLocation];
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [self updateLocation];
+}
+
+- (void)updateLocation
+{
+    if ([SCLocationManager isLocationServicesEnabled]) {
+        SCLocationManager *locationManager  = [SCLocationManager sharedManager];
+        [locationManager startLoadUserLocation];
+    }
 }
 
 
